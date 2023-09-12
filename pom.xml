@@ -9,7 +9,7 @@
 
   <groupId>org.apache.parquet</groupId>
   <artifactId>parquet</artifactId>
-  <version>1.12.2</version>
+  <version>1.2.2-prx</version>
   <packaging>pom</packaging>
 
   <name>Apache Parquet MR</name>
@@ -212,6 +212,25 @@
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>1.5.1</version>
+          <executions>
+            <execution>
+              <id>default-deploy</id>
+              <phase>deploy</phase>
+              <goals>
+                <goal>deploy</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <serverId>nexus</serverId>
+            <nexusUrl>http://172.16.51.187:8081/repository/maven-snapshots/</nexusUrl>
+            <skipStaging>true</skipStaging>
+          </configuration>
+        </plugin>
         <plugin>
           <!-- Disable the source artifact from ASF parent -->
           <artifactId>maven-assembly-plugin</artifactId>
