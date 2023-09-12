@@ -36,6 +36,7 @@ import org.apache.parquet.column.values.factory.ValuesWriterFactory;
 import org.apache.parquet.column.values.rle.RunLengthBitPackingHybridEncoder;
 import org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesWriter;
 import org.apache.parquet.schema.MessageType;
+import org.apache.parquet.schema.PrimitiveType;
 
 import static org.apache.parquet.bytes.BytesUtils.getWidthFromMaxInt;
 
@@ -185,7 +186,11 @@ public class ParquetProperties {
   }
 
   public boolean isDictionaryEnabled(ColumnDescriptor column) {
-    return dictionaryEnabled.getValue(column);
+    if (column.getPrimitiveType().getPrimitiveTypeName() == PrimitiveType.PrimitiveTypeName.BINARY) {
+      return dictionaryEnabled.getValue(column);
+    } else {
+      return false;
+    }
   }
 
   public boolean isByteStreamSplitEnabled() {
