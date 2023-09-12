@@ -16,13 +16,6 @@
   <url>https://parquet.apache.org</url>
   <description>Parquet is a columnar storage format that supports nested data. This provides the java implementation.</description>
 
-  <scm>
-    <connection>scm:git:git@github.com:apache/parquet-mr.git</connection>
-    <url>scm:git:git@github.com:apache/parquet-mr.git</url>
-    <developerConnection>scm:git:git@github.com:apache/parquet-mr.git</developerConnection>
-    <tag>apache-parquet-1.12.2-rc0</tag>
-  </scm>
-
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
