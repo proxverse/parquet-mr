@@ -9,7 +9,7 @@
 
   <groupId>org.apache.parquet</groupId>
   <artifactId>parquet</artifactId>
-  <version>1.12.2-prx-SNAPSHOT</version>
+  <version>1.12.2-prx</version>
   <packaging>pom</packaging>
 
   <name>Apache Parquet MR</name>
@@ -118,7 +118,6 @@
     <module>parquet-column</module>
     <module>parquet-common</module>
     <module>parquet-encoding</module>
-    <module>parquet-format-structures</module>
     <module>parquet-generator</module>
     <module>parquet-hadoop</module>
     <module>parquet-jackson</module>
