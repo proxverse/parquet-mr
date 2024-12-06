@@ -7,9 +7,9 @@
     <version>16</version>
   </parent>
 
-  <groupId>org.apache.parquet</groupId>
+  <groupId>com.bocom.cosc.parquet</groupId>
   <artifactId>parquet</artifactId>
-  <version>1.12.2-prx</version>
+  <version>1.12.3-prx</version>
   <packaging>pom</packaging>
 
   <name>Apache Parquet MR</name>
